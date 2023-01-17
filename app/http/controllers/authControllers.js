@@ -1,7 +1,12 @@
+const nodemailer = require("nodemailer");
+const bodyparser = require('body-parser');
 const User=require('../../models/user')
 const bcrypt=require('bcrypt')
 const passport = require('passport')
 var session = require('express-session');
+const Mail = require('nodemailer/lib/mailer');
+const sendEmail=require('../../models/sendemail')
+
 function authController(){
 
     return{
@@ -65,7 +70,19 @@ function authController(){
             user.save().then((user)=>{
                 //registration completed
                 //login
-                return res.redirect('/')
+                
+               sendEmail({
+                from:"mona23sonai@gmail.com",
+                to:user.email,
+                subject:"Thanks for registering",
+                html:`<div>
+                <h1>Thanks ${user.name} for registering in Omnifood</h1>
+                <img style="height: 2.2rem;" class="logo" alt="Omnifood logo" src="https://i.postimg.cc/SNPtTBKj/omnifood-logo.png" />
+                <p>Please visit our webpage for Most healthy Recipes 😎😍</p>
+            </div>`
+               })
+
+    return res.redirect('/')
 
             }).catch(err=>{
                 req.flash('error','Something went wrong')
