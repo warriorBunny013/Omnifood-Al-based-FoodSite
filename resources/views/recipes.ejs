@@ -1,0 +1,80 @@
+<section class="section-meals" id="meals">
+  
+  <div class="container grid grid--3-cols margin-bottom-md">
+    
+    <div class="diets">
+        <h3 class="heading-tertiary">Filter recipes</h3>
+        <form action="recipes.ejs">
+        <ul class="list">
+          <li class="list-item">
+  
+            <input data-recipe="<%=JSON.stringify(recipes) %>" class="checkbox" name="checkbox" value="vegetarian" type="radio">
+            <span>Vegetarian</span>
+          </li>
+          <li class="list-item">
+            <input data-recipe="<%=JSON.stringify(recipes) %>" class="checkbox" name="checkbox" value="vegan" type="radio">
+            <span>Vegan</span>
+          </li>
+          <li class="list-item">
+            <input data-recipe="<%=JSON.stringify(recipes) %>"  class="checkbox" name="checkbox" value="non-veg" type="radio">
+            <span>Non Vegetarian</span>
+          </li>
+          <li class="list-item">
+            <input data-recipe="<%=JSON.stringify(recipes) %>"  class="checkbox" name="checkbox" value="Eggaterian" type="radio">
+            <span>Eggaterian</span>
+          </li>
+          <li class="list-item">
+            <input data-recipe="<%=JSON.stringify(recipes) %>" class="checkbox" name="checkbox" value="sweets" type="radio">
+            <span>Sweets</span>
+          </li>
+          <li class="list-item">
+            <input data-recipe="<%=JSON.stringify(recipes) %>"  class="checkbox" name="checkbox" value="beverage" type="radio">
+            <span>Beverages</span>
+          </li>
+        </ul>
+        </form>
+        
+      </div>
+      
+
+      <% recipes.forEach(function(recipe){ %>
+    <div class="meal" id="<%=recipe._id %>">
+      <img
+        src="<%= recipe.image %>"
+        class="meal-img"
+        alt="<%= recipe.name %>"
+      />
+      <div class="meal-content">
+        <div class="meal-tags">
+          <span class="tag tag--vegetarian"><%= recipe.type %></span>
+        </div>
+        <p class="meal-title"><%= recipe.name %></p>
+        <ul class="meal-attributes">
+          <li class="meal-attribute">
+            <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+            <span><strong><%= recipe.calories %></strong> calories</span>
+          </li>
+          <li class="meal-attribute">
+            <ion-icon
+              class="meal-icon"
+              name="restaurant-outline"
+            ></ion-icon>
+            <span>NutriScore &reg; <strong><%= recipe.nutriscore%></strong></span>
+          </li>
+          <li class="meal-attribute">
+            <ion-icon class="meal-icon" name="wallet-outline"></ion-icon>
+            <span>$ <strong> <%= recipe.price %></strong></span>
+          </li>
+        </ul>
+        <a data-recipe="<%=JSON.stringify(recipe) %>" style="display: flex;  justify-content: center; margin-top:30px;" class="add-to-cart btn btn--full">
+          Add to cart</a>
+      </div>
+    </div>
+    <% }) %>
+    
+  </div>
+  <script>
+   
+  </script>
+  
+</section>

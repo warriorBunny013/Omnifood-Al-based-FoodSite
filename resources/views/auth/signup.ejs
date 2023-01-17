@@ -1,0 +1,99 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"rel="stylesheet">
+    <title>omnifood</title>
+  </head>
+
+  <div class="flex min-h-full items-center justify-center pt-24 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="shadow-md px-20 max-w-6xl space-y-30">
+      <div>
+        <h2 class="mt-6 mb-4 text-center text-6xl font-bold tracking-tight text-gray-900">Registration</h2>
+        
+      </div>
+      <form action="/signup" method="POST" class="mt-8 pb-20 space-y-20">
+        <% if(messages.error){ %>
+        <span class="text-red-500 text-2xl"><%= messages.error %></span>
+        <% } %>
+        <input type="hidden" name="remember" value="true">
+        <div class="-space-y-px mt-10 rounded-md shadow-sm flex flex-col gap-4">
+          <div>
+            <label for="name" class="sr-only">name</label>
+            <input id="name" value="<%=messages.name %>" name="name" type="name" autocomplete="name"  class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-8 py-3 text-gray-900 placeholder-gray-500 focus:z-10 sm
+            text-2xl" placeholder="Enter your name">
+          </div>
+          <div>
+            <label for="email-address" class="sr-only">Email address</label>
+            <input id="email-address"  value="<%=messages.email %>" name="email" type="email" autocomplete="email"  class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-8 py-3 text-gray-900 placeholder-gray-500 focus:z-10 sm
+            text-2xl" placeholder="Email address">
+          </div>
+          <div>
+            <label for="password" class="sr-only">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password"  class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-8 py-3 text-gray-900 placeholder-gray-500 focus:z-10 text-2xl" placeholder="Password">
+          </div>
+          <!-- <div>
+            <label for="password" class="sr-only">Password</label>
+            <input id="password" name="confirmpassword" type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-8 py-3 text-gray-900 placeholder-gray-500 focus:z-10 text-2xl" placeholder="Confirm Password">
+          </div> -->
+        </div>
+  
+        <div class="flex items-center gap-10 justify-between">
+          <div class="flex items-center">
+            <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-orange-600 focus:ring-orange-500">
+            <label for="remember-me" class="ml-2 block text-2xl text-gray-900">Remember me</label>
+          </div>
+  
+          <div class="text-lg">
+            <a href="/login" onclick="location.replace('/login'),'_top'"  class="font-medium text-2xl text-orange-600 hover:text-orange-500">Already have an account?</a>
+          </div>
+        </div>
+  
+        <div>
+          <button type="submit" class="group relative flex w-full justify-center rounded-xl border border-transparent bg-orange-600 py-3 px-6 font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-3xl">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+              <!-- Heroicon name: mini/lock-closed -->
+              <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="orange" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+              </svg>
+            </span>
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>

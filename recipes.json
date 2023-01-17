@@ -1,0 +1,144 @@
+[   
+    {
+        "_id":{ "$oid":"63c30f289ac07dedb634581f"},
+      "name":"Japanese Gyozas",
+       "type":"vegetarian",
+       "calories":"650",
+       "nutriscore":"74",
+       "rating":"4.9",
+        "image":"https://i.postimg.cc/V68N1fwd/meal-1.jpg",
+        "price":23
+    },
+    {
+        "_id":{"$oid":"63c30fa69ac07dedb6345820"},
+       "name":"Avocado Salad",
+       "type":"vegan",
+       "calories":"400",
+       "nutriscore":"92",
+       "rating":"4.8",
+       "image":"https://i.postimg.cc/Hk8Wycsr/meal-2.jpg",
+       "price":14
+
+    },
+    {
+        "_id":{"$oid":"63c30fc69ac07dedb6345821"},
+       "name":"Roti and Sabji",
+       "type":"vegetarian",
+       "calories":"500",
+       "nutriscore":"90",
+       "rating":"4.7",
+       "image":"https://i.postimg.cc/jj9zhJyB/roti-sabji.jpg",
+       "price":27
+
+    },
+    {
+        "_id":{"$oid":"63c30fde9ac07dedb6345822"},
+        "name":"Rice and peas curry",
+        "type":"vegan",
+       "calories":"500",
+       "nutriscore":"90",
+       "rating":"4.5",
+       "image":"https://i.postimg.cc/x89qG0pW/rice-peas.jpg",
+       "price":25
+
+    },
+    {
+        "_id":{"$oid":"63c30ff69ac07dedb6345823"},
+        "name":"Soup",
+        "type":"vegetarian",
+       "calories":"500",
+       "nutriscore":"90",
+       "rating":"4.5",
+       "image":"https://i.postimg.cc/FznmfmMb/soup.jpg",
+       "price":10
+
+    },
+    {
+        "_id":{"$oid":"63c3100a9ac07dedb6345824"},
+        "name":"Egg Salad",
+        "type":"Eggaterian",
+       "calories":"500",
+       "nutriscore":"90",
+       "rating":"4.5",
+       "image":"https://i.postimg.cc/Z5NZqGV3/egg-salad.jpg",
+       "price":17
+
+    },
+    {
+        "_id":{"$oid":"63c310239ac07dedb6345825"},
+        "name":"Nutri Noodles",
+        "type":"vegan",
+       "calories":"500",
+       "nutriscore":"90",
+       "rating":"4.5",
+       "image":"https://i.postimg.cc/L5hFFwJJ/noodles.jpg",
+       "price":28
+
+    },
+    {
+        "_id":{"$oid":"63c310399ac07dedb6345826"},
+        "name":"Punjabi sweet",
+        "type":"sweets",
+       "calories":"500",
+       "nutriscore":"90",
+       "rating":"4.5",
+       "image":"https://i.postimg.cc/rp9B0MWd/punjabi-sweet.jpg",
+       "price":16
+
+    },
+    {
+        "_id":{"$oid":"63c3104b9ac07dedb6345827"},
+        "name":"Berry Velvet Cake",
+        "type":"sweets",
+       "calories":"500",
+       "nutriscore":"90",
+       "rating":"4.5",
+       "image":"https://i.postimg.cc/Z5t2wCxB/red-cake.jpg",
+       "price":20
+
+    },
+    {
+        "_id":{"$oid":"63c3105e9ac07dedb6345828"},
+        "name":"Berry Smoothie",
+        "type":"beverage",
+       "calories":"500",
+       "nutriscore":"90",
+       "rating":"4.5",
+       "image":"https://i.postimg.cc/ZKKx4ZY7/berry-smoothie.jpg",
+       "price":18
+
+    },
+    {
+        "_id":{"$oid":"63c310729ac07dedb6345829"},
+        "name":"Strawberry Smoothie",
+        "type":"beverage",
+       "calories":"500",
+       "nutriscore":"90",
+       "rating":"4.5",
+       "image":"https://i.postimg.cc/9MnNZMff/strawberry-juice.jpg",
+       "price":10
+
+    },
+    {
+        "_id":{"$oid":"63c310889ac07dedb634582a"},
+        "name":"Fish",
+        "type":"non-veg",
+       "calories":"500",
+       "nutriscore":"90",
+       "rating":"4.5",
+       "image":"https://i.postimg.cc/kGj8B6Mj/fish.jpg",
+       "price":11
+
+    },
+    {
+        "_id":{"$oid":"63c3109b9ac07dedb634582b"},
+        "name":"Roasted chicken",
+        "type":"non-veg",
+       "calories":"500",
+       "nutriscore":"90",
+       "rating":"4.5",
+       "image":"https://i.postimg.cc/dVZdVVbB/roasted-chicken.jpg",
+       "price":12
+
+    }
+]

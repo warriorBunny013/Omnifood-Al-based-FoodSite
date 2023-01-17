@@ -1,0 +1,4 @@
+node_modules/
+.env
+csvrecipes.csv
+foodsite.csv.csv
